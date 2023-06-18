@@ -5,7 +5,7 @@ import Slots from "./components/Slots";
 
 function App() {
   const [noOfSeats, setNoOfSeats] = useState();
-  const [bookedSeats, setBookedSeats] = useState();
+ // const [bookedSeats, setBookedSeats] = useState();
 
   // Book the seats by sending post request and handling the response
 
