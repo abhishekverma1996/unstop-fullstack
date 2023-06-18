@@ -23,10 +23,3 @@ app.listen(8800, () => {
 });
 
 module.exports = app;
-
-// mukul7661
-// jJ5WFXK0KQanBoWn
-
-//p8ClBE5vLqlnUDVp
-
-//0xY8xSvrjatTwDPf
