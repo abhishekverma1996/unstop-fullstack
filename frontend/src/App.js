@@ -13,7 +13,7 @@ function App() {
     e.preventDefault();
     // let seats;
 
-    const seats = await axios.post("http://localhost:8800/api/seats", {
+    const seats = await axios.post("https://unstop-api-m7x8.onrender.com/api/seats", {
       noOfSeats: noOfSeats,
     });
 
@@ -38,7 +38,7 @@ function App() {
   // Reset all the seat bookings
 
   const clickHandler = async () => {
-    await axios.put("http://localhost:8800/api/seats/reset");
+    await axios.put("https://unstop-api-m7x8.onrender.com/api/seats/reset");
     alert("All bookings have been reset");
   };
 
