@@ -6,6 +6,7 @@ const axios = require("axios");
 router.get("/", async (req, res) => {
   try {
     const seat = await Seat.find();
+    console.log(seat);
 
     res.status(200).json(seat);
   } catch (err) {
@@ -157,6 +158,29 @@ router.put("/:id", async (req, res) => {
     );
 
     res.status(200).json("booked");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/create", async (req, res) => {
+  try {
+    const newSeat = new Seat({
+      seat_no: "3",
+      isBooked: true,
+    });
+
+    newSeat
+      .save() //then saving this to database and this return promise
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        //if data not saved error showed
+        console.log(err);
+      });
+
+    res.status(200).json(newSeat);
   } catch (err) {
     res.status(500).json(err);
   }
