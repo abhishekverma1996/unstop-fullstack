@@ -44,7 +44,7 @@ function Slots() {
 
   const fun1 = async () => {
     axios
-      .get("http://localhost:8800/api/seats")
+      .get("https://unstop-api-m7x8.onrender.com/api/seats")
       .then((res) => {
         setSeats(res.data);
       })
