@@ -25,10 +25,10 @@ function App() {
         message += seats.data[i];
       }
       alert("Seats Booked are " + message);
-    } else if (seats.data.alert == "Not valid") {
+    } else if (seats.data.alert === "Not valid") {
       alert("Please enter a number between 1 and 7");
     } else if (
-      seats.data.alert == "Number of Seats you want to book are not available"
+      seats.data.alert === "Number of Seats you want to book are not available"
     ) {
       alert("Number of Seats you want to book are not available");
     }
