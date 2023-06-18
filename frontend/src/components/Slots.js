@@ -44,7 +44,7 @@ function Slots() {
 
   const fun1 = async () => {
     axios
-      .get("https://unstop-fullstack-api.onrender.com/api/seats")
+      .get("http://localhost:8800/api/seats")
       .then((res) => {
         setSeats(res.data);
       })

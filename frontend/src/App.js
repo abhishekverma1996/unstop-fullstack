@@ -13,22 +13,9 @@ function App() {
     e.preventDefault();
     // let seats;
 
-    const seats = await axios.post(
-      "https://unstop-fullstack-api.onrender.com/api/seats",
-      {
-        noOfSeats: noOfSeats,
-      }
-    );
-    // .then((res) => {
-    //   setBookedSeats(res.data);
-    //   console.log(res.data);
-    //   // seats = res.data;
-    // })
-    // .catch((err) => {
-    //   console.log(err);
-    // });
-    // console.log("post");
-    // console.log(bookedSeats);
+    const seats = await axios.post("http://localhost:8800/api/seats", {
+      noOfSeats: noOfSeats,
+    });
 
     if (Array.isArray(seats.data)) {
       console.log("post");
@@ -51,9 +38,7 @@ function App() {
   // Reset all the seat bookings
 
   const clickHandler = async () => {
-    await axios.put(
-      "https://unstop-fullstack-api.onrender.com/api/seats/reset"
-    );
+    await axios.put("http://localhost:8800/api/seats/reset");
     alert("All bookings have been reset");
   };
 
