@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Slot from "./Slot";
 
 function SlotsRow(props) {
